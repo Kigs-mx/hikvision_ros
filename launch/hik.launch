@@ -2,7 +2,7 @@
 
 <arg name="ip_addr" default="192.168.1.64"/>
 <arg name="user_name" default="admin"/>
-<arg name="password" default="R00mie-03"/>
+<arg name="password" default="xxxxxx"/>
 <arg name="port" default="8000"/>
 <!-- Channel 1 -> RGB Camera     Channel 2 -> Thermal Camera-->
 <arg name="channel" default="1"/>
@@ -39,11 +39,11 @@
 </node>
 
 <node pkg="nodelet" type="nodelet" args="manager"
-        name="record_player_manager" output="screen"/>
+        name="hikvision_cameras_manager" output="screen"/>
 
   <!-- Color rectified image -->
 <node pkg="nodelet" type="nodelet" name="rectify_color"
-    args="load image_proc/rectify record_player_manager --no-bond"
+    args="load image_proc/rectify hikvision_cameras_manager --no-bond"
     respawn="false">
         
     <remap from="image_mono" to="hik_cam_node/$(arg camera_name)/image_raw" />
