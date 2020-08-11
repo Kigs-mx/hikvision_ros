@@ -1,16 +1,16 @@
 <launch>
     <group ns="hik1">
-        <arg name="ip_addr" default="192.168.5.100"/>
+        <arg name="ip_addr" default="192.168.1.64"/>
         <arg name="user_name" default="admin"/>
-        <arg name="password" default="ht123456"/>
+        <arg name="password" default="R00mie-03"/>
         <arg name="port" default="8000"/>
         <arg name="channel" default="1"/>
         <!--link_mode: 0-tcp, 1-udp, 2-multicast, 3-rtp, 4-rtp/rtsp, 5-rstp/http-->
         <arg name="link_mode" default="0"/>
 
 
-        <arg name="image_width" default="1280"/>
-        <arg name="image_height" default="720"/>
+        <arg name="image_width" default="320"/>
+        <arg name="image_height" default="240"/>
         <arg name="camera_frame_id" default="hik_camera"/>
         <arg name="camera_name" default="hik_camera1"/>
         <arg name="camera_info_url" default=""/>
@@ -38,17 +38,17 @@
     </group>
 
     <group ns="hik2">
-        <arg name="ip_addr" default="192.168.5.100"/>
+        <arg name="ip_addr" default="192.168.1.64"/>
         <arg name="user_name" default="admin"/>
-        <arg name="password" default="ht123456"/>
+        <arg name="password" default="R00mie-03"/>
         <arg name="port" default="8000"/>
-        <arg name="channel" default="1"/>
+        <arg name="channel" default="2"/>
         <!--link_mode: 0-tcp, 1-udp, 2-multicast, 3-rtp, 4-rtp/rtsp, 5-rstp/http-->
         <arg name="link_mode" default="0"/>
 
 
-        <arg name="image_width" default="1280"/>
-        <arg name="image_height" default="720"/>
+        <arg name="image_width" default="640"/>
+        <arg name="image_height" default="480"/>
         <arg name="camera_frame_id" default="hik_camera"/>
         <arg name="camera_name" default="hik_camera2"/>
         <arg name="camera_info_url" default=""/>

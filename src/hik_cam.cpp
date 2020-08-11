@@ -40,9 +40,9 @@ void HikvisionCamera::decodeCallback(int nPort, char *pBuf, int nSize, FRAME_INF
         // publish the image
         image_pub.publish(*msg, *ci);
 
-        #ifndef NDEBUG
-            ROS_INFO("[%s] Stream CallBack, Convert YV12 to sensor_msgs.",camera_name.c_str());
-        #endif
+        //#ifndef NDEBUG
+            //ROS_INFO("[%s] Stream CallBack, Convert YV12 to sensor_msgs.",camera_name.c_str());
+        //#endif
     }
 }
 
@@ -259,9 +259,8 @@ void HikvisionCamera::initROSIO(ros::NodeHandle& priv_node)
         camera_info_mgr->setCameraInfo(camera_info);
     }
 
-
     image_transport::ImageTransport it(priv_node);
-    image_pub = it.advertiseCamera(camera_name, 1);
+    image_pub = it.advertiseCamera(camera_name+"/image_raw", 1);
 
     SetCameraInfoSrv = priv_node.advertiseService(camera_name+"/set_camera_info",&HikvisionCamera::setCameraInfo,this);
 }
