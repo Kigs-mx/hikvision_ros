@@ -260,6 +260,7 @@ void HikvisionCamera::initROSIO(ros::NodeHandle& priv_node)
     }
 
     image_transport::ImageTransport it(priv_node);
+    // add image_raw at topic name to image proc
     image_pub = it.advertiseCamera(camera_name+"/image_raw", 1);
 
     SetCameraInfoSrv = priv_node.advertiseService(camera_name+"/set_camera_info",&HikvisionCamera::setCameraInfo,this);
