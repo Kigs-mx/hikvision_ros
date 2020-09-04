@@ -2,7 +2,7 @@
 
 <arg name="ip_addr" default="192.168.1.64"/>
 <arg name="user_name" default="admin"/>
-<arg name="password" default="xxxxxx"/>
+<arg name="password" default="R00mie-03"/>
 <arg name="port" default="8000"/>
 <!-- Channel 1 -> RGB Camera     Channel 2 -> Thermal Camera-->
 <arg name="channel" default="1"/>

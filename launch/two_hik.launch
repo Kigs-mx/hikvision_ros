@@ -2,7 +2,7 @@
     <group ns="hik1">
         <arg name="ip_addr" default="192.168.1.64"/>
         <arg name="user_name" default="admin"/>
-        <arg name="password" default="xxxxxx"/>
+        <arg name="password" default="R00mie-03"/>
         <arg name="port" default="8000"/>
         <arg name="channel" default="1"/>
         <!--link_mode: 0-tcp, 1-udp, 2-multicast, 3-rtp, 4-rtp/rtsp, 5-rstp/http-->
@@ -12,7 +12,7 @@
         <arg name="image_width" default="320"/>
         <arg name="image_height" default="240"/>
         <arg name="camera_frame_id" default="hik_camera"/>
-        <arg name="camera_name" default="hik_camera1"/>
+        <arg name="camera_name" default="hik_rgb_cam_ds2t"/>
         <arg name="camera_info_url" default=""/>
 
         <node pkg="hikvision_ros" type="hik_cam_node" name="hik_cam_node" output="screen">
@@ -40,7 +40,7 @@
     <group ns="hik2">
         <arg name="ip_addr" default="192.168.1.64"/>
         <arg name="user_name" default="admin"/>
-        <arg name="password" default="xxxxxx"/>
+        <arg name="password" default="R00mie-03"/>
         <arg name="port" default="8000"/>
         <arg name="channel" default="2"/>
         <!--link_mode: 0-tcp, 1-udp, 2-multicast, 3-rtp, 4-rtp/rtsp, 5-rstp/http-->
@@ -50,7 +50,7 @@
         <arg name="image_width" default="640"/>
         <arg name="image_height" default="480"/>
         <arg name="camera_frame_id" default="hik_camera"/>
-        <arg name="camera_name" default="hik_camera2"/>
+        <arg name="camera_name" default="hik_thermal_cam_ds2t"/>
         <arg name="camera_info_url" default=""/>
 
         <node pkg="hikvision_ros" type="hik_cam_node" name="hik_cam_node" output="screen">
